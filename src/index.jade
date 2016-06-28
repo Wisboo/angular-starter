@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    title Wisboo starter
+    meta(charset="UTF-8")
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    )
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="description" content="")
+    meta(itemprop="description" content="")
+
+    // og tags
+    meta(property="og:description", content="")
+    meta(property="og:title", content="")
+    meta(property="og:type" content="website")
+    meta(property="og:url", content="")
+    meta(property="og:image", content="")
+    meta(property="og:site_name", content="")
+    meta(property="fb:admins", content="")
+
+    link(rel="shortcut icon" href="")
+    link(href="/css/vendor.css", rel="stylesheet")
+    link(href="/css/all.css", rel="stylesheet")
+    base(href="/")
+  body(ng-app="wisboo")
+    .container-fluid(ui-view="main")
+    // inject:js
+    // endinject

@@ -1,0 +1,53 @@
+nav.navbar.navbar-header-app {
+  background-color: $darken-grey;
+  border: 0;
+
+  .navbar-option {
+    &.active {
+      .navbar-link {
+        color: $white;
+        opacity: 1;
+
+        &:hover,
+        &:focus,
+        &:active {
+          opacity: 1;
+        }
+      }
+    }
+
+    .navbar-link {
+      color: $white;
+      opacity: 0.5;
+
+      &.notifications {
+        position: relative;
+
+        &.unread {
+          opacity: 1;
+
+          &:before {
+            position: absolute;
+            content: " ";
+            background-color: $rating-blue;
+            border-radius: 50%;
+            right: 18px;
+            @include size(5px);
+          }
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 1;
+        background-color: $darken-grey;
+      }
+
+      &:focus,
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+}

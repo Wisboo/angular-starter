@@ -1,0 +1,46 @@
+.course-step-box {
+  @extend .box-container;
+  margin: 0;
+  height: 380px;
+  padding: 0;
+  position: relative;
+  @include transition(all 0.3s);
+
+  &.with-border:before {
+    background-color: $box-blue;
+    content: "";
+    height: 3px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    border-color: $grey;
+  }
+
+  .course-step-box-content {
+    margin-bottom: 35px;
+    min-height: 215px;
+
+    .course-step-box-img {
+      margin-bottom: 50px;
+      margin-top: 60px;
+      max-height: 90px;
+      max-width: 90px;
+    }
+
+    .course-step-box-description {
+      letter-spacing: 0.5px;
+      font-weight: bold;
+      color: $dark-grey;
+    }
+  }
+
+  .course-step-box-footer {
+    padding: 10px 40px 40px;
+  }
+}

@@ -1,0 +1,114 @@
+.icon {
+  @extend .v-align;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include size(20px);
+
+  &.add-icon {
+    margin-top: -12px;
+    margin-left: -3px;
+    background-image: url('#{$icons-path}/add-icon.png');
+  }
+
+  &.settings-icon {
+    background-image: url('#{$icons-path}/settings-icon.png');
+  }
+
+  &.reports-icon {
+    background-image: url('#{$icons-path}/reports-icon.png');
+  }
+
+  &.profile-icon {
+    @include size(21px);
+    background-image: url('#{$icons-path}/profile-icon.png');
+  }
+
+  &.pen-icon {
+    background-image: url('#{$icons-path}/pen-icon.png');
+  }
+
+  &.pen-white-icon {
+    @include size(25px);
+    background-image: url('#{$icons-path}/pen-white-icon.png');
+  }
+
+  &.arrow-left-icon {
+    background-image: url('#{$icons-path}/arrow-left-icon.png');
+  }
+
+  &.info-icon {
+    background-image: url('#{$icons-path}/info-icon.png');
+  }
+
+  &.clock-icon {
+    background-image: url('#{$icons-path}/clock-icon.png');
+  }
+
+  &.docs-icon {
+    background-image: url('#{$icons-path}/docs-icon.png');
+  }
+
+  &.exercises-icon {
+    background-image: url('#{$icons-path}/exercises-icon.png');
+  }
+
+  &.profile-blue-icon {
+    background-image: url('#{$icons-path}/profile-blue-icon.png');
+  }
+
+  &.video-icon {
+    background-image: url('#{$icons-path}/video-icon.png');
+  }
+
+  &.trash-icon {
+    background-image: url('#{$icons-path}/trash-icon.png');
+
+    &.big {
+      background-image: url('#{$icons-path}/trash-big-icon.png');
+    }
+  }
+
+  &.trash-white-icon {
+    @include size(25px);
+    background-image: url('#{$icons-path}/trash-white-icon.png');
+  }
+
+  &.pencil-icon {
+    background-image: url('#{$icons-path}/pencil-icon.png');
+  }
+
+  &.vdots-icon {
+    background-image: url('#{$icons-path}/vdots-icon.png');
+  }
+
+  &.calendar-icon {
+    background-image: url('#{$icons-path}/calendar-icon.png');
+  }
+
+  &.bell-icon {
+    background-image: url('#{$icons-path}/bell-icon.png');
+  }
+
+  &.eye-icon {
+    background-image: url('#{$icons-path}/eye-icon.png');
+
+    &.big {
+      background-image: url('#{$icons-path}/eye-big-icon.png');
+    }
+
+    &.grey {
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+      -webkit-filter: grayscale(100%);
+    }
+  }
+
+  &.dashed-eye-icon {
+    background-image: url('#{$icons-path}/dashed-eye-icon.png');
+  }
+
+  &.clock-icon,
+  &.profile-blue-icon {
+    @include size(22px);
+  }
+}

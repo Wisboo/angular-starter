@@ -1,0 +1,15 @@
+.dashed-box {
+  padding: 15px 25px;
+  border: 1px dashed $dark-grey;
+  border-radius: 5px;
+  background-color: $box-grey;
+
+  &.has-hover:hover {
+    cursor: pointer;
+    background-color: $light-grey;
+  }
+
+  &.active {
+    background-color: $light-grey;
+  }
+}

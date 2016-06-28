@@ -1,0 +1,67 @@
+.modal-dialog {
+  @extend .box-container;
+  margin: 80px auto 0;
+  padding: 5px;
+  max-width: 530px;
+
+  .modal-logo {
+    background-color: $grey;
+    border-radius: 50%;
+    @include size(150px);
+    left: 0;
+    right: 0;
+    margin: 0 auto 65px;
+    position: absolute;
+    top: -75px;
+    z-index: 1;
+  }
+
+  .box-title {
+    color: $dark-grey;
+  }
+
+  .modal-content {
+    position: relative;
+    box-shadow: none;
+    padding: 20px 15px;
+  }
+
+  .modal-close {
+    background-color: $wisboo-grey;
+    border-radius: 50%;
+    color: white;
+    margin: 0;
+    opacity: 1;
+    padding: 10px 15px;
+    position: absolute;
+    right: -25px;
+    text-align: center;
+    top: -25px;
+    outline: 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .modal-content,
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    border: 0;
+  }
+
+  .modal-social-buttons {
+    .btn {
+      @extend .btn-block;
+    }
+  }
+
+  .modal-body {
+    margin-top: 65px;
+
+    &.confirm {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.switch-box {
+  position: relative;
+  border-radius: 13px;
+  width: 37px;
+  display: inline-block;
+  background-color: $switch-grey;
+  padding: 1px;
+  height: 17px;
+  vertical-align: middle;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 0;
+
+  &.on {
+    background-color: $switch-green;
+  }
+
+  .switch-toggle {
+    transition: left 0.1s ease-in-out;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    background-color: #FAFAFA;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 2px;
+    top: 1.5px;
+    box-shadow: 0 1px 4px rgba($black, .4);
+  }
+
+  .switch-handler {
+    display: none;
+
+    &:checked + .switch-toggle {
+      left: 22px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.steps-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  .step {
+    border-radius: 50%;
+    border: 1px solid transparent;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 3px;
+    vertical-align: middle;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .step-icon {
+      background-color: $light-grey;
+      border-radius: 50%;
+      display: block;
+      @include size(14px);
+    }
+
+    &.success {
+      background-color: $success-color;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .step-icon {
+        @extend .fa;
+        @extend .fa-check;
+        background-color: transparent;
+        color: $white;
+      }
+    }
+
+    &.active {
+      border: 1px solid $grey;
+
+      .step-icon {
+        background-color: $grey;
+      }
+    }
+  }
+}

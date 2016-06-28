@@ -1,0 +1,35 @@
+.custom-radio {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  color: $dark-grey;
+
+  input[type="radio"] {
+    display: none;
+
+    &:checked + .circle-radio:after {
+      background-color: $category-blue;
+    }
+  }
+
+  .circle-radio {
+    border: 1px solid rgba($black, .3);
+    border-radius: 50px;
+    display: inline-block;
+    @include size(18px);
+    position: relative;
+
+    &:after {
+      background-color: $grey;
+      border-radius: 50%;
+      content: '';
+      height: 10px;
+      left: 3px;
+      position: absolute;
+      top: 3px;
+      transition: all ease-in-out .2s;
+      width: 10px;
+    }
+
+  }
+}

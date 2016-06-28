@@ -1,0 +1,27 @@
+# npm dependencies
+node_modules
+
+# bower dependencies
+bower_components
+
+# npm log file
+npm-debug.log
+
+# compiled code folder
+build
+
+# aws keys file
+config/aws.js
+
+# config keys
+config/secrets.development.js
+config/secrets.staging.js
+config/secrets.production.js
+
+# idea
+.idea
+
+# aws
+.awspublish*
+
+.DS_Store

@@ -1,0 +1,17 @@
+.label {
+  font-size: 8px;
+  padding: 2px 3px;
+  vertical-align: super;
+
+  &.label-primary {
+    background-color: $wisboo-pink;
+  }
+
+  &.label-secondary {
+    background-color: $wisboo-grey;
+  }
+
+  &.label-info {
+    background-color: $light-blue;
+  }
+}

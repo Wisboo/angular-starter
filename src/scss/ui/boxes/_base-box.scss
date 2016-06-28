@@ -1,0 +1,82 @@
+.box-container {
+  position: relative;
+  margin: 20px;
+  padding: 30px;
+  background-color: $white;
+  box-shadow: 0 2px 4px 0 rgba($black, 0.1);
+  border: 1px solid $light-grey;
+  border-radius: 8px;
+
+  .box-logo {
+    background-color: $grey;
+    border-radius: 50%;
+    @include size(150px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: -75px;
+    z-index: 1;
+  }
+
+  .box-logo + .box-title {
+    margin-top: 65px;
+  }
+
+  .box-title,
+  .box-subtitle {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: $grey;
+  }
+
+  .box-subtitle {
+    margin-top: 5px;
+    font-family: 'open-sans';
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .box-title + :not(.box-subtitle) {
+    margin-top: 33px;
+  }
+
+  .box-title + .box-subtitle {
+    margin-top: 5px;
+    margin-bottom: 33px;
+  }
+
+  .box-details {
+    color: $grey;
+    font-size: 16px;
+
+    > .fa {
+      font-size: 16px;
+    }
+  }
+
+  &.box-md,
+  &.box-sm {
+    margin: 0 auto;
+  }
+
+  &.box-md {
+    max-width: 450px;
+  }
+
+  &.box-sm {
+    max-width: 330px;
+  }
+
+  @media all and (max-width: 768px) {
+    padding: 15px;
+
+    &.box-md,
+    &.box-sm {
+      @media all and (max-width: 480px) {
+        max-width: 100%;
+      }
+    }
+  }
+
+}

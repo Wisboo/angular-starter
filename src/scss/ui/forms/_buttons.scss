@@ -1,0 +1,358 @@
+.btn {
+  color: $white;
+  font-size: 15px;
+  font-weight: 400;
+  border: 0;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-height: 50px;
+  @include transition(all 0.3s ease-in-out);
+
+  > .fa {
+    @extend .v-align;
+    font-size: 18px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active {
+    box-shadow: inset 0 1px 3px 0 rgba($black, 0.5);
+  }
+
+  // Buttons styles
+  &.btn-primary {
+    background-color: $wisboo-pink;
+    border: 1px solid $wisboo-pink;
+
+    &:focus,
+    &:active,
+    &.disabled:hover {
+      background-color: $wisboo-pink;
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &.disabled {
+      opacity: 0.2;
+    }
+
+    &.light {
+      &:hover {
+        opacity: 1;
+        background-color: #ED71AA;
+      }
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $wisboo-grey;
+
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $wisboo-grey;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $dark-grey;
+    }
+
+    &.disabled {
+      opacity: 0.1;
+      &:hover {
+        background-color: $wisboo-grey;
+      }
+    }
+  }
+
+  &.btn-default {
+    color: $wisboo-grey;
+    border: 1px solid $grey;
+
+    &:active,
+    &:focus {
+      background-color: $white;
+    }
+
+    &.disabled {
+      opacity: 0.3;
+
+      &:hover {
+        background-color: $wisboo-grey;
+      }
+    }
+  }
+
+  &.btn-blue {
+    background-color: $facebook-blue;
+
+    &:focus,
+    &:active,
+    &.disabled:hover {
+      background-color: $facebook-blue;
+    }
+
+    &:focus,
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &.btn-white {
+    background-color: $white;
+    border-color: $wisboo-grey;
+    border: 1px solid $wisboo-grey;
+    color: $wisboo-grey;
+
+    &.highlighted {
+      background-color: $wisboo-grey;
+      color: $white;
+
+      &:hover {
+        background-color: $wisboo-grey;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+      color: $white;
+      background-color: $dark-grey;
+    }
+
+    &:active {
+      background-color: $wisboo-grey;
+    }
+  }
+
+  &.btn-light-blue {
+    background-color: $linkedin-blue;
+
+    &:active,
+    &:focus,
+    &.disabled:hover {
+      background-color: $linkedin-blue;
+    }
+
+    &:focus,
+    &:hover {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $facebook-blue-hover;
+    }
+  }
+
+  &.btn-red {
+    background-color: $google-red;
+
+    &:focus,
+    &:hover {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $google-red-hover;
+    }
+
+    &.disabled:hover {
+      background-color: $google-red;
+    }
+  }
+
+  &.btn-bordered {
+    padding: 12px 25px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid $light-grey;
+
+    > span {
+      @extend .v-align;
+      font-size: 14px;
+      border-color: $semi-dark-grey;
+      color: $semi-dark-grey;
+
+      &.fa {
+        font-size: 20px;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $grey;
+
+      > span {
+        color: $dark-grey;
+      }
+    }
+
+    &.light {
+      color: $grey;
+      border-color: $white;
+
+      &:hover {
+        color: $white;
+        opacity: 1;
+        border-color: $white;
+        background-color: $lighten-grey;
+      }
+    }
+
+    &.light-blue {
+      padding: 12px 6px;
+      text-align: center;
+      color: $dark-grey;
+
+      &:hover {
+        border-color: $category-blue;
+        color: $white;
+        background-color: $category-blue;
+        opacity: 1;
+      }
+    }
+
+    &.default {
+      border: 2px solid $button-grey;
+      color: $dark-grey;
+
+      &:hover {
+        border-color: $darken-grey;
+        background-color: $darken-grey;
+        color: $white;
+      }
+    }
+
+    &.selected {
+      background: $category-blue;
+      border-color: $category-blue;
+      color: $white;
+    }
+  }
+
+  &.btn-circle {
+    border-radius: 50%;
+    font-size: 24px;
+    @include size(56px);
+    box-shadow: 0 4px 4px 0 rgba($black, 0.2);
+    max-height: 56px;
+    min-height: 56px;
+
+    &:hover,
+    &:active {
+      outline: 0;
+    }
+
+    &.small {
+      @include size(35px);
+      min-height: 35px;
+      padding: 3px 9px;
+      box-shadow: none;
+    }
+  }
+
+  &.btn-confirm {
+    background: $white;
+    padding: 6px 30px;
+    border: 2px solid $dark-grey;
+    color: $dark-grey;
+
+    &.dark {
+      background-color: $darken-grey;
+      border-color: $darken-grey;
+      color: $white;
+    }
+  }
+
+  &.btn-unstyled {
+    @extend %btn-unstyled;
+  }
+
+  &.btn-tab {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    color: grey;
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    opacity: 1;
+    box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba($black, 0.1);
+    border-bottom: 0;
+    padding-bottom: 8px;
+    font-weight: bold;
+    margin-right: 10px;
+
+    .close-icon {
+      font-size: 10px;
+      padding-top: 1px;
+      @include size(16px);
+      vertical-align: middle;
+      color: $white;
+      background-color: $switch-grey;
+      border-radius: 50%;
+
+      &:before {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  // Button sizes
+  &.btn-lg {
+    min-width: 200px;
+  }
+
+  &.btn-md {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    min-width: 150px;
+  }
+
+  &.btn-sm {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  &.btn-xs {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+
+  &.btn-xxs {
+    font-size: 12px;
+    padding: 2px 14px;
+  }
+
+  &.btn-wide {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  &.btn-huge {
+    border-width: 2px;
+    font-size: 18px;
+
+    &:hover {
+      border-width: 2px;
+    }
+
+    @media all and (max-width: 720px) {
+      font-size: 3.5vw;
+    }
+  }
+
+  &.btn-vs {
+    padding: 1px 5px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+}

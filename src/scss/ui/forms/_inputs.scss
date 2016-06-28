@@ -1,0 +1,166 @@
+.form-control {
+  border: 2px solid $light-grey;
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 23px 15px;
+
+  &:focus {
+    border-color: $wisboo-pink;
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &.unbordered {
+    border: 0;
+    display: inline-block;
+    padding: 5px;
+  }
+}
+
+select.form-control {
+  height: 50px;
+  padding: 6px 12px;
+}
+
+textarea {
+  &.form-control {
+    padding-top: 10px;
+  }
+
+  &.v-resize {
+    resize: vertical;
+  }
+
+  &.h-resize {
+    resize: horizontal;
+  }
+
+  &.no-resize {
+    resize: none;
+  }
+}
+
+.input-group-addon {
+  background-color: $light-grey;
+  border-color: $light-grey;
+  color: $dark-grey;
+}
+
+.input-group-btn {
+  > .btn {
+    border-color: $light-grey !important;
+    border-width: 2px !important;
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+}
+
+.form-group {
+  position: relative;
+
+  &.bordered {
+    border: 2px solid $light-grey;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  .form-group-message {
+    @extend .prepend-xs-top;
+    color: $grey;
+    display: none;
+    font-size: 12px;
+  }
+
+  &.has-length {
+    input + .input-length,
+    textarea + .input-length {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: $grey;
+      font-size: 14px;
+    }
+
+    textarea + .input-length {
+      top: auto;
+      bottom: 5px;
+    }
+
+    input {
+      padding-right: 35px;
+    }
+
+    [class*='col-'] {
+      input + .input-length,
+      textarea + .input-length {
+        right: 20px;
+      }
+    }
+  }
+
+}
+
+.has-success {
+  .form-control {
+    border-color: $success-color;
+  }
+
+  .input-group-addon {
+    border-color: $success-color;
+  }
+
+  .form-group-message {
+    color: $success-color;
+  }
+}
+
+.has-error {
+  .form-control {
+    border-color: $danger-color;
+  }
+
+  .input-group-addon {
+    border-color: $danger-color;
+  }
+
+  .form-group-message {
+    color: $danger-color;
+  }
+}
+
+.has-warning {
+  .form-control {
+    border-color: $warning-color;
+  }
+
+  .input-group-addon {
+    border-color: $warning-color;
+  }
+
+  .form-group-message {
+    color: $warning-color;
+  }
+}
+
+.has-success,
+.has-error,
+.has-warning {
+  .input-group-addon {
+    background-color: $light-grey;
+    color: $dark-grey;
+  }
+
+  .form-group-message {
+    display: block;
+  }
+}
+
+[class*='has-'] {
+  .input-group {
+    .form-control {
+      border-right-color: transparent;
+    }
+  }
+}

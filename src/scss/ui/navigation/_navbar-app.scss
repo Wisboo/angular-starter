@@ -1,0 +1,126 @@
+.navbar-app {
+  .nav-tabs {
+    background-color: $darken-grey;
+    border-bottom: 1px solid $darken-grey;
+    padding: 45px 65px 0 50px;
+    border: 0;
+
+    .navbar-tab,
+    .navbar-tab.active {
+      margin-bottom: 0;
+      border-radius: 0;
+      border-bottom: 3px solid transparent;
+
+      > a {
+        border-radius: 0;
+        cursor: pointer;
+        color: rgba($white, 0.5);
+        border: 0;
+        background-color: $darken-grey;
+        margin-right: 0;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+    .navbar-tab {
+      &.active {
+        border-bottom-color: $wisboo-pink;
+
+        > a {
+          font-weight: bold;
+          color: $white;
+        }
+      }
+
+      &.has-error {
+        border-bottom-color: $danger-color;
+      }
+    }
+
+    .navbar-tab {
+
+    }
+  }
+
+  &.center {
+    .nav-tabs {
+      text-align: center;
+
+      .navbar-tab {
+        float: none;
+        display: inline-block;
+      }
+    }
+  }
+
+  &.white {
+    .nav-tabs {
+      background-color: $white;
+
+      .navbar-tab {
+        > a {
+          color: $dark-grey;
+          background-color: $white;
+        }
+
+        &.active {
+          > a {
+            color: $black;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &.vertical {
+    .nav-pills {
+      @extend .col-md-3;
+
+      .navbar-tab {
+        cursor: pointer;
+        margin-bottom: 7px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        > a {
+          padding: 8px 30px;
+          color: $dark-grey;
+        }
+
+        &.active > a {
+          color: $white;
+          background-color: $darken-grey;
+        }
+
+        &.has-error {
+          > a {
+            border-right: 3px solid $danger-color;
+          }
+        }
+
+        &:not(.active).has-error {
+          > a {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      @extend .col-md-9;
+      min-height: 768px;
+    }
+
+    @media all and (max-width: 768px) {
+      .nav-pills {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
